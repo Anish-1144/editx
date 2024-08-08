@@ -6,7 +6,7 @@ body{
 }
 
 .container{
-    background-image: url("../Final_portfolio/images/Rectangle 2 (1).jpg");
+    background-image: url("images/Rectangle 2 (1).jpg");
     background-size: cover;
     background-position: center;
     height: fit-content;
@@ -166,7 +166,7 @@ body{
 /*-------------------Testimonial------------------*/
 
 .bg-4 img{
-    background-image: url("../Final_portfolio/images/Rectangle 2 (2).jpg");
+    background-image: url("images/Rectangle 2 (2).jpg");
     margin-top: 83%;
     width: 100%;
     height: 100%;
@@ -1787,7 +1787,7 @@ body{
 
 @media screen and (max-width: 425px) {
     .container {
-        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-image: url('images/mob/mod_1.png'); 
         background-size: cover;
         background-repeat: no-repeat;
         background-position: absolute;
