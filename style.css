@@ -1,0 +1,2276 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif ;
+    font-size: border- box ;
+}
+
+.container{
+    background-image: url("../Final_portfolio/images/Rectangle 2 (1).jpg");
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.hi-container{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-200%, -70%);
+    text-align: center;
+    color: white;
+    font-family: "Rampart One";
+    font-weight: 200;
+    font-size: 160px;
+
+}
+.text-container{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 96px;
+    letter-spacing: -1px;
+}
+
+.I-am-container{
+    position: absolute;
+    top: 45%;
+    left: 52.5%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.editor-container{
+    position: absolute;
+    top: 56%;
+    left: 55%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-family: "Raleway";
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.lets-connect{
+    position: absolute;
+    top: 61%;
+    left: 65.5%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    background-color: white noboarders;
+    padding: 10px 20px;
+    color: black;
+    font-family: "Raleway";
+    font-weight: 550;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+
+/*-------------------My Work------------------*/
+
+
+.my-work{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+
+.video-1 {
+    position: absolute;
+    margin-left: 28%;
+    margin-top: 5%;
+    width: 338.97px;
+    height: 616.31px;
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+
+  }
+  
+
+.video-2{
+    position: absolute;
+    margin-left: 53%;
+    margin-top: 5%;
+    width: 338.97px;
+    height: 616.31px;
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+}
+
+.video-3{
+    position: absolute;
+    margin-left: 28%;
+    margin-top: 43%;
+    width: 338.97px;
+    height: 616.31px;
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+}
+
+.video-4{
+    position: absolute;
+    margin-left: 53%;
+    margin-top: 43%;
+    width: 338.97px;
+    height: 616.31px;
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+}
+
+.view-more{
+    position: absolute;
+    top: 258%;
+    left: 49.7%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-family: "Raleway";
+    font-weight: 550;
+    font-size: 16px;
+    letter-spacing: -1px;
+    border-radius: 5px;
+}
+
+/*-------------------Testimonial------------------*/
+
+.bg-4 img{
+    background-image: url("../Final_portfolio/images/Rectangle 2 (2).jpg");
+    margin-top: 83%;
+    width: 100%;
+    height: 100%;
+}
+
+.testmonial-container{
+    position: absolute;
+    top: 280%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    display: flex;
+    align-items: grid; 
+
+}
+
+.card-container{
+    display: grid;
+    border-radius: 10%;
+}
+
+
+.testcard-1{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    top: 290%;
+    left: 26%;
+    height: 250px;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card-content p{
+
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content img{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.name{
+    margin-top: 65px;
+    position: absolute;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+
+/*-------------------testcard - 2 ------------------*/
+
+
+.testcard-2{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 43%;
+    top: 290%;
+    height: 250px;
+}
+
+
+.card-content-2{
+    padding: 20px;
+}
+
+.card-content-2 p{
+
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-2 img{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 27px;
+}
+
+.name-2{
+    margin-top: 45px;
+    position: absolute;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+/*-------------------testcard - 3 ------------------*/
+
+.testcard-3{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 60%;
+    top: 290%;
+    height: 250px;
+}
+
+
+.card-content-3{
+    padding: 20px;
+}
+
+.card-content-3 p{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-3 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.name-3{
+    margin-top: 66px;
+    position: absolute;
+    padding-left: 55px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+/*-------------------testcard - 4 ------------------*/
+
+.testcard-4{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 35%;
+    top: 320%;
+    height: 250px;
+}
+
+
+.card-content-4{
+    padding: 20px;
+}
+
+.card-content-4 p{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-4 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 76px;
+}
+
+.name-4{
+    margin-top: 95px;
+    position: absolute;
+    padding-left: 55px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+/*-------------------testcard - 5 ------------------*/
+
+.testcard-5{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 51.5%;
+    top: 320%;
+    height: 250px;
+}
+
+
+.card-content-5{
+    padding: 20px;
+}
+
+.card-content-5 p{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-5 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 76px;
+}
+
+.name-5{
+    margin-top: 93px;
+    position: absolute;
+    padding-left: 25px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+
+/*-------------------Black Card ------------------*/
+
+.black-card{
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    border-radius: 15px;
+    width: 50%;
+
+}
+
+.black-card-content{
+    align-items: center;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -1px;
+    padding: 20px;
+    text-align: center;
+}
+
+.black-card img{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 360px;
+    width: 233px;
+}
+
+.black-card-name{
+    margin-top: 2%;
+    margin-left: 15%;
+    font-size: 28px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 500;
+    text-align: center;
+}
+
+.black-card-para{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 30%;
+    font-size: 16px;
+    letter-spacing: 1;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: start;
+}
+
+.black-card-skill{
+    margin-top: 10%;
+    margin-left: 15%;
+    font-size: 24px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 500;
+    text-align: center;
+}
+
+.black-card-skillbar{
+    margin-top: 12%;
+    margin-left: 27%;
+    font-size: 16px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit{
+    margin-top: 13.5%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit-1{
+    margin-top: 15%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit-2{
+    margin-top: 16.5%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit-3{
+    margin-top: 18%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+/*-------------------Black Card - Skill Bar ------------------*/
+.black-skill-grey{
+    background-color: rgb(92, 91, 91);
+    margin-top: 13.6%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white{
+    background-color: rgb(255, 255, 255);
+    margin-top: 13.6%;
+    position: absolute;
+    margin-left: 27%;
+    width: 290px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-grey-1{
+    background-color: rgb(92, 91, 91);
+    margin-top: 15.1%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white-1{
+    background-color: rgb(255, 255, 255);
+    margin-top: 15.1%;
+    position: absolute;
+    margin-left: 27%;
+    width: 250px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-grey-2{
+    background-color: rgb(92, 91, 91);
+    margin-top: 16.7%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white-2{
+    background-color: rgb(255, 255, 255);
+    margin-top: 16.7%;
+    position: absolute;
+    margin-left: 27%;
+    width: 120px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-grey-3{
+    background-color: rgb(92, 91, 91);
+    margin-top: 18.2%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white-3{
+    background-color: rgb(255, 255, 255);
+    margin-top: 18.2%;
+    position: absolute;
+    margin-left: 27%;
+    width: 200px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+/*-------------------Footer------------------*/
+.six{
+    height: 10%;
+}
+.bg-6 img{
+    width: 100%;
+    height: 780%;
+}
+
+.connect-container{
+    position: absolute;
+    top: 430%;
+    left: 49%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    display: flex;
+    align-items: grid; 
+
+}
+
+.OR{
+    position: absolute;
+    top: 455%;
+    left: 49%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    display: flex;
+    align-items: grid; 
+
+}
+
+.insta img{
+    position: absolute;
+    top: 449%;
+    left: 53%;
+    width: 38px;
+    height: 38px;
+
+}
+
+.mail img{
+    position: absolute;
+    top: 456%;
+    left: 53%;
+    width: 38px;
+    height: 38px;
+
+}
+
+
+.insta-text{
+    position: absolute;
+    top: 451%;
+    left: 60%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: -.5x;   
+    display: flex;
+    align-items: grid; 
+
+}
+
+.mail-text{
+    position: absolute;
+    top: 458%;
+    left: 62.8%;
+    transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: -.5x;   
+    display: flex;
+    align-items: grid; 
+
+}
+
+
+
+.form{
+    position: absolute;
+    top: 440%;
+    left: 25%;  
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    width: 18%;
+    height: 30%;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+.form-contact{
+    position: absolute;
+    top: 5%;
+    left: 10%;  
+
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway";
+    font-weight: 500;
+
+    font-size: 32px;
+    letter-spacing: -.5x;   
+
+
+}
+.form input{
+    width: 80%;
+    height: 12%;
+    margin-top: 5%;
+    margin-left: 2%;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+
+.form textarea{
+    width: 80%;
+    height: 30%;
+    margin-top: 5%;
+    margin-left: 2%;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+
+.form button{
+    width: 50%;
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    padding-bottom: 25px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: -.5x;   
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .hi-container{
+        top: 35%;   
+    }
+    .text-container{
+        top: 35%;
+    }
+    
+    .I-am-container{
+        top: 30%;
+        left: 50.5%;
+    }
+    
+    .editor-container{
+
+        top: 40.5%;
+        left: 55%;
+    }
+    
+    .lets-connect{
+        top: 45%;
+        left: 67%;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 51%;
+        top: 86%;
+    }
+    
+    
+    .video-1 {
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+      
+    
+    .video-2{
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+    
+    .video-3{
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+    
+    .video-4{
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+    
+    .view-more{
+        top: 225%;
+        left: 51%;
+    }
+    
+    /*-------------------Testimonial------------------*/
+    
+    .testmonial-container{
+        top: 244%;
+        left: 51%;
+    }
+    
+    .testcard-1{
+        top: 250%;
+        left: 20%;
+    }
+    
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        left: 42%;
+        top: 250%;
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 64%;
+        top: 250%;
+    }
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 30%;
+        top: 285%;
+    }
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 52%;
+        top: 285%;
+    }   
+    
+    /*-------------------Black Card ------------------*/
+    
+    .black-card-name{
+        margin-top: 3%;
+        margin-left: 20%;
+    }
+    
+    .black-card-para{
+        margin-top: 6%;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 28%;
+    }
+    
+    .black-card-skill{
+        margin-top: 13%;
+        margin-left: 20%;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 15%;
+        margin-left: 28%;
+    }
+    
+    .black-card-edit{
+        margin-top: 16.5%;
+        margin-left: 20%;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 18%;
+        margin-left: 20%;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 19.4%;
+        margin-left: 20%;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 20.9%;
+        margin-left: 20%;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 16.7%;
+        margin-left: 28%;
+        width: 285px;
+    }
+    
+    .black-skill-white{
+        margin-top: 16.7%;
+        margin-left: 28%;
+        width: 260px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 18.1%;
+        margin-left: 28%;
+        width: 285px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 18.1%;
+        margin-left: 28%;
+        width: 230px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 19.7%;
+        margin-left: 28%;
+        width: 285px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 19.7%;
+        margin-left: 28%;
+        width: 120px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 21.1%;
+        margin-left: 28%;
+        width: 285px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 21.1%;
+        margin-left: 28%;
+        width: 150px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 394%;
+    }
+    
+    .OR{
+        top: 415%;
+        left: 48%;
+    }
+    
+    .insta img{
+        top: 410%;
+        width: 38px;
+        height: 38px;
+    
+    }
+    
+    .mail img{
+        top: 416.5%;
+        width: 38px;
+        height: 38px;
+    }
+    
+    
+    .insta-text{
+        top: 412%;
+        left: 62.5%;    
+    }
+    
+    .mail-text{
+        top: 419%;
+        left: 66.2%;
+    }
+    
+    .form{
+        top: 400%;
+    
+    }
+
+}
+
+
+/**---------------1024---------------------------*/
+
+
+@media screen and (max-width: 1024px) {
+    .hi-container{
+        top: 25%;   
+        left: 70%;
+    }
+    .text-container{
+        top: 25%;
+        left: 70%;
+    }
+    
+    .I-am-container{
+        top: 21%;
+        left: 56.2%;
+    }
+    
+    .editor-container{
+
+        top: 30.5%;
+        left: 50%;
+        transform: translate(-15%, -60%);
+    }
+    
+    .lets-connect{
+        top: 35%;
+        left: 80%;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 51%;
+        top: 47%;
+    }
+    
+    
+    .video-1 {
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+      
+    
+    .video-2{
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+    
+    .video-3{
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+    
+    .video-4{
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+    
+    .view-more{
+        top: 124%;
+        left: 51%;
+    }
+    
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+        width: 100%;
+        height: 80%;
+    }
+    .testmonial-container{
+        top: 134%;
+        left: 50%;
+    }
+    
+    .testcard-1{
+        top: 140%;
+        left: 7%;
+    }   
+    
+    .card-content img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        left: 38%;
+        top: 140%;
+    }
+    .card-content-2 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 25px;
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 69%;
+        top: 140%;
+    }
+    .card-content-3 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 21%;
+        top: 168%;
+    }
+    .card-content-4 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 75px;
+    }
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 52%;
+        top: 168%;
+    }   
+    .card-content-5 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 75px;
+    }
+    
+    /*-------------------Black Card ------------------*/
+    .black-card{
+        width: 70%;   
+    }
+  
+    .black-card img{
+        height: 300px;
+        width: 200px;
+    }
+    .black-card-name{
+        margin-top: 3%;
+        margin-left: 25%;
+    }
+    
+    .black-card-para{
+        margin-top: 6.5%;
+        margin-left: 25%;
+        margin-right: 20%;
+        width: 40%;
+    }
+    
+    .black-card-skill{
+        margin-top: 17%;
+        margin-left: 25%;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 19%;
+        margin-left: 36%;
+    }
+    
+    .black-card-edit{
+        margin-top: 21.5%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 24%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 26.4%;
+        margin-left: 25%;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 28.9%;
+        margin-left: 25%;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 22%;
+        margin-left: 36%;
+        width: 285px;
+    }
+    
+    .black-skill-white{
+        margin-top: 22%;
+        margin-left:36%;
+        width: 260px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 24.3%;
+        margin-left:36%;
+        width: 285px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 24.3%;
+        margin-left:36%;
+        width: 230px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 26.7%;
+        margin-left: 36%;
+        width: 285px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 26.7%;
+        margin-left: 36%;
+        width: 120px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 29.3%;
+        margin-left: 36%;
+        width: 285px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 29.3%;
+        margin-left: 36%;
+        width: 150px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 550%;
+    }
+    
+    .connect-container{
+        top: 250%;
+    }
+    
+    .OR{
+        top: 270%;
+        left: 48%;
+    }
+    
+    .insta img{
+        top: 266%;
+        width: 38px;
+        height: 38px;
+    
+    }
+    
+    .mail img{
+        top: 271%;
+        width: 38px;
+        height: 38px;
+    }
+    
+    
+    .insta-text{
+        top: 268%;
+        left: 66.5%;    
+    }
+    
+    .mail-text{
+        top: 273%;
+        left: 71.5%;
+    }
+    
+    .form{
+        top: 255%;
+        left: 10%;
+        width: 30%;
+    }
+
+}
+
+
+/**---------------768---------------------------*/
+
+
+@media screen and (max-width: 768px) {
+    .hi-container{
+        top: 25%;   
+        left: 70%;
+        font-size: 120px;
+    }
+    .text-container{
+        top: 25%;
+        left: 72%;
+        font-size: 80px;
+    }
+    
+    .I-am-container{
+        top: 21%;
+        left: 56.7%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 30%;
+        left: 50.5%;
+        transform: translate(-15%, -60%);
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 35%;
+        left: 83%;
+        font-size: 12px;
+        padding: 8px 10px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 51%;
+        top: 48%;
+        font-size: 24px;
+    }
+    
+    
+    .video-1 {
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+        margin-top: 1%;
+    }
+      
+    
+    .video-2{
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+
+        margin-top: 1%;
+    }
+    
+    .video-3{
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+        margin-top: 40%;
+    }
+    
+    .video-4{
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+        margin-top: 40%;
+    }
+    
+    .view-more{
+        top: 124%;
+        left: 51%;
+        font-size: 10px;
+    }
+    
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+        width: 100%;
+        height: 80%;
+    }
+    .testmonial-container{
+        top: 134%;
+        left: 50%;
+        font-size: 24px;
+    }
+    
+    .testcard-1{
+        top: 140%;
+        left: 7%;
+        width: 200px;
+        height: 200px;
+    }   
+
+    .card-content{
+        padding: 10px;
+    }
+    
+    .card-content p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    .name{
+        margin-top: 60px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        left: 38%;
+        top: 140%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-2{
+        padding: 10px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-2{
+        margin-top: 43px;
+        padding-left: 35px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 69%;
+        top: 140%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-3{
+        padding: 10px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    .name-3{
+        margin-top: 60px;
+        padding-left: 40px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 21%;
+        top: 168%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-4{
+        padding: 10px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 90px;
+    }
+    
+    .name-4{
+        margin-top: 100px;
+        padding-left: 40px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 52%;
+        top: 168%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-5{
+        padding: 10px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    .name-5{
+        margin-top: 60px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    
+    /*-------------------Black Card ------------------*/
+    .black-card{
+        width: 70%;   
+    }
+
+    .black-card-content{       
+        font-size: 24px;
+    }
+  
+    .black-card img{
+        height: 250px;
+        width: 160px;
+    }
+    .black-card-name{
+        margin-top: 3%;
+        margin-left: 25%;
+        font-size: 18px;
+    }
+    
+    .black-card-para{
+        margin-top: 6.5%;
+        margin-left: 25%;
+        margin-right: 20%;
+        width: 40%;
+        font-size: 12px;
+    }
+    
+    .black-card-skill{
+        margin-top: 17%;
+        margin-left: 25%;
+        font-size: 18px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 19%;
+        margin-left: 38%;
+        font-size: 12px;
+    }
+    
+    .black-card-edit{
+        margin-top: 21.5%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+        font-size: 12px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 24%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+        font-size: 12px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 26.4%;
+        margin-left: 25%;
+        font-size: 12px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 28.9%;
+        margin-left: 25%;
+        font-size: 12px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 22%;
+        margin-left: 38%;
+        width: 210px;
+        height: 6px;
+    }
+    
+    .black-skill-white{
+        margin-top: 22%;
+        margin-left:38%;
+        width: 180px;
+        height: 6px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 24.5%;
+        margin-left:38%;
+        width: 210px;
+        height: 6px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 24.5%;
+        margin-left:38%;
+        width: 150px;
+        height: 6px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 26.9%;
+        margin-left: 38%;
+        width: 210px;
+        height: 6px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 26.9%;
+        margin-left: 38%;
+        width: 100px;
+        height: 6px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 29.4%;
+        margin-left: 38%;
+        width: 210px;
+        height: 6px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 29.4%;
+        margin-left: 38%;
+        width: 130px;
+        height: 6px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 550%;
+    }
+    
+    .connect-container{
+        top: 252%;
+        font-size: 24px;
+    }
+    
+    .OR{
+        top: 270%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 266%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 271%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 268%;
+        left: 66.5%;    
+        font-size: 18px;
+    }
+    
+    .mail-text{
+        top: 273%;
+        left: 71.5%;
+        font-size: 18px;
+    }
+    
+    .form{
+        top: 255%;
+        left: 10%;
+        width: 30%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 44%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 50%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 56%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 70%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 148%;
+        left: 51%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 150%;
+    }
+    .testmonial-container{
+        top: 160%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 165%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 186%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 155%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 197%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 176%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 78%;
+        margin-left: 22%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 85%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 78%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 105%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 110%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 114%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 118%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 122%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 111%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 111%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 115%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 115%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 119%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 119%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 123%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 123%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 318%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 360%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 362%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 368%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 364%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 370%;
+        left: 57.5%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 320%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
