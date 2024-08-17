@@ -1,3 +1,5 @@
+
+
 body{
     margin: 0;
     padding: 0;
@@ -9,31 +11,57 @@ body{
     background-image: url("images/Rectangle 2 (1).jpg");
     background-size: cover;
     background-position: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
 .container img{
     width: 100%;
     height: auto;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
-.hi-container{
+.hi-container {
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: 60%;
-    transform: translate(-200%, -70%);
+    -webkit-transform: translate(-200%, -70%);
+        -ms-transform: translate(-200%, -70%);
+            transform: translate(-200%, -70%);
     text-align: center;
     color: white;
     font-family: "Rampart One";
     font-weight: 200;
     font-size: 160px;
-
+    -webkit-animation: shake 0.7s ease-in-out infinite;
+            animation: shake 0.7s ease-in-out infinite; /* Apply the shake animation */
 }
+
+/* Keyframes for the shake animation */
+@-webkit-keyframes shake {
+    0% { -webkit-transform: translate(-200%, -70%) rotate(0deg); transform: translate(-200%, -70%) rotate(0deg); }
+    25% { -webkit-transform: translate(-200%, -70%) rotate(-5deg); transform: translate(-200%, -70%) rotate(-5deg); }
+    50% { -webkit-transform: translate(-200%, -70%) rotate(5deg); transform: translate(-200%, -70%) rotate(5deg); }
+    75% { -webkit-transform: translate(-200%, -70%) rotate(-5deg); transform: translate(-200%, -70%) rotate(-5deg); }
+    100% { -webkit-transform: translate(-200%, -70%) rotate(0deg); transform: translate(-200%, -70%) rotate(0deg); }
+}
+@keyframes shake {
+    0% { -webkit-transform: translate(-200%, -70%) rotate(0deg); transform: translate(-200%, -70%) rotate(0deg); }
+    25% { -webkit-transform: translate(-200%, -70%) rotate(-5deg); transform: translate(-200%, -70%) rotate(-5deg); }
+    50% { -webkit-transform: translate(-200%, -70%) rotate(5deg); transform: translate(-200%, -70%) rotate(5deg); }
+    75% { -webkit-transform: translate(-200%, -70%) rotate(-5deg); transform: translate(-200%, -70%) rotate(-5deg); }
+    100% { -webkit-transform: translate(-200%, -70%) rotate(0deg); transform: translate(-200%, -70%) rotate(0deg); }
+}
+
+
 .text-container{
     position: absolute;
     top: 50%;
-    left: 60%;
-    transform: translate(-50%, -60%);
+    left: 61%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: white;
     font-family: "Raleway";
@@ -44,22 +72,26 @@ body{
 
 .I-am-container{
     position: absolute;
-    top: 45%;
-    left: 52.5%;
-    transform: translate(-50%, -60%);
+    top: 41%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: white;
     font-family: "Raleway";
     font-weight: 500;
-    font-size: 32px;
+    font-size: 60px;
     letter-spacing: -1px;
 }
 
 .editor-container{
     position: absolute;
-    top: 56%;
+    top: 58%;
     left: 55%;
-    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: white;
     font-family: "Raleway";
@@ -70,9 +102,11 @@ body{
 
 .lets-connect{
     position: absolute;
-    top: 61%;
+    top: 65%;
     left: 65.5%;
-    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     background-color: white noboarders;
     padding: 10px 20px;
@@ -81,77 +115,153 @@ body{
     font-weight: 550;
     font-size: 16px;
     letter-spacing: -1px;
+    border-radius: 7px;
 }
 
 
 /*-------------------My Work------------------*/
 
-
-.my-work{
+.my-work {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
-    color: rgb(0, 0, 0);
+    color: black;
     font-family: "Raleway";
     font-weight: 500;
     font-size: 32px;
     letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+}
+
+.my-work::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Adjust to control the distance of the underline from the text */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Color of the underline */
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: bottom left;
+        -ms-transform-origin: bottom left;
+            transform-origin: bottom left;
+    -webkit-animation: underline 2s ease-in-out infinite;
+            animation: underline 2s ease-in-out infinite; /* Infinite animation */
+}
+
+/* Keyframes for infinite underline animation */
+@-webkit-keyframes underline {
+    0% {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+    50% {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+    100% {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+}
+@keyframes underline {
+    0% {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
+    50% {
+        -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+    }
+    100% {
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+    }
 }
 
 
-.video-1 {
+
+
+
+ .video-1 {
     position: absolute;
-    margin-left: 28%;
-    margin-top: 5%;
-    width: 338.97px;
-    height: 616.31px;
+    border-radius:10%;
+   /* border-radius: 32px; */ 
+    margin-left: 27%;
+    margin-top: 2%;
+    width: 318px;
+    height: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    border-radius: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
 
   }
   
 
 .video-2{
     position: absolute;
+    border-radius:10%;
     margin-left: 53%;
-    margin-top: 5%;
-    width: 338.97px;
-    height: 616.31px;
+    margin-top: 2%;
+    width: 318px;
+    height: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    border-radius: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    
 }
 
 .video-3{
     position: absolute;
-    margin-left: 28%;
-    margin-top: 43%;
-    width: 338.97px;
-    height: 616.31px;
+    margin-left: 27%;
+    margin-top: 40%;
+    width: 318px;
+    height: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    border-radius: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10%;
 }
 
 .video-4{
     position: absolute;
     margin-left: 53%;
-    margin-top: 43%;
-    width: 338.97px;
-    height: 616.31px;
+    margin-top: 40%;
+    width: 318px;
+    height: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    border-radius: 32px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10%;
 }
 
 .view-more{
     position: absolute;
-    top: 258%;
-    left: 49.7%;
-    transform: translate(-50%, -60%);
+    top: 288%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     padding: 10px 20px;
     color: rgb(255, 255, 255);
@@ -160,72 +270,130 @@ body{
     font-weight: 550;
     font-size: 16px;
     letter-spacing: -1px;
-    border-radius: 5px;
+    border-radius: 7px;
 }
 
 /*-------------------Testimonial------------------*/
+/*-------------------Testimonial------------------*/
 
-.bg-4 img{
-    background-image: url("images/Rectangle 2 (2).jpg");
-    margin-top: 83%;
+.bg-4 img {
+    /* background-image: url("images/Rectangle 2 (2).jpg"); */
+    margin-top: 80%;
     width: 100%;
     height: 100%;
 }
 
-.testmonial-container{
+.testmonial-container {
     position: absolute;
-    top: 280%;
+    top: 308%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: rgb(253, 253, 253);
     font-family: "Raleway";
     font-weight: 300;
     font-size: 32px;
     letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    align-items: grid; 
-
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
 }
 
-.card-container{
+.card-container {
+    display: -ms-grid;
     display: grid;
     border-radius: 10%;
 }
 
-
-.testcard-1{
+.testcard-1,
+.testcard-2,
+.testcard-3,
+.testcard-4,
+.testcard-5 {
     background-color: rgb(255, 255, 255);
     position: absolute;
     border-radius: 10px;
     width: 250px;
-    top: 290%;
-    left: 26%;
-    height: 250px;
+    height: 200px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transition effect */
+    overflow: hidden; /* Ensure content stays within the card */
 }
 
-.card-content{
+/* Specific positioning for each card */
+.testcard-1 { top: 312%; left: 26%; }
+.testcard-2 { top: 312%; left: 43%; }
+.testcard-3 { top: 312%; left: 60%; }
+.testcard-4 { top: 345%; left: 35%; }
+.testcard-5 { top: 345%; left: 52%; }
+
+/* Hover effects for all testcards */
+.testcard-1:hover,
+.testcard-2:hover,
+.testcard-3:hover,
+.testcard-4:hover,
+.testcard-5:hover {
+    background-color: #dcdcdc; /* Light gray background on hover */
+    -webkit-box-shadow: 0 4px 8px rgba(238, 236, 236, 0.2);
+            box-shadow: 0 4px 8px rgba(238, 236, 236, 0.2); /* Add shadow on hover */
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02); /* Slightly scale up the card */
+}
+
+/* Hover effects for inner elements */
+.testcard-1:hover .card-content,
+.testcard-2:hover .card-content-2,
+.testcard-3:hover .card-content-3,
+.testcard-4:hover .card-content-4,
+.testcard-5:hover .card-content-5 {
+    color: #fff; /* Change text color to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add a white glow */
+}
+
+/* Card content and styling */
+.card-content,
+.card-content-2,
+.card-content-3,
+.card-content-4,
+.card-content-5 {
     padding: 20px;
 }
 
-.card-content p{
-
+.card-content p,
+.card-content-2 p,
+.card-content-3 p,
+.card-content-4 p,
+.card-content-5 p {
     font-size: 20px;
     color: rgb(7, 7, 7);
     font-family: "Raleway";
     font-weight: 500;
 }
 
-.card-content img{
-    
+.card-content img,
+.card-content-2 img,
+.card-content-3 img,
+.card-content-4 img,
+.card-content-5 img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    margin-top: 50px;
+    margin-top: 18px;
 }
 
-.name{
-    margin-top: 65px;
+.name,
+.name-2,
+.name-3,
+.name-4,
+.name-5 {
+    margin-top: 18px;
     position: absolute;
     padding-left: 30px;
     padding-bottom: 10px;
@@ -236,185 +404,13 @@ body{
     font-weight: 500;
 }
 
+/* Specific styling for names */
+.name { padding-left: 30px; }
+.name-2 { padding-left: 50px; padding-right: 30px; }
+.name-3 { padding-left: 55px; padding-right: 5px; }
+.name-4 { padding-left: 55px; padding-right: 5px; }
+.name-5 { padding-left: 25px; padding-right: 5px; }
 
-/*-------------------testcard - 2 ------------------*/
-
-
-.testcard-2{
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    border-radius: 10px;
-    width: 250px;
-    left: 43%;
-    top: 290%;
-    height: 250px;
-}
-
-
-.card-content-2{
-    padding: 20px;
-}
-
-.card-content-2 p{
-
-    font-size: 20px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-.card-content-2 img{
-    
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 27px;
-}
-
-.name-2{
-    margin-top: 45px;
-    position: absolute;
-    padding-left: 50px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-/*-------------------testcard - 3 ------------------*/
-
-.testcard-3{
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    border-radius: 10px;
-    width: 250px;
-    left: 60%;
-    top: 290%;
-    height: 250px;
-}
-
-
-.card-content-3{
-    padding: 20px;
-}
-
-.card-content-3 p{
-    font-size: 20px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-.card-content-3 img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 50px;
-}
-
-.name-3{
-    margin-top: 66px;
-    position: absolute;
-    padding-left: 55px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-/*-------------------testcard - 4 ------------------*/
-
-.testcard-4{
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    border-radius: 10px;
-    width: 250px;
-    left: 35%;
-    top: 320%;
-    height: 250px;
-}
-
-
-.card-content-4{
-    padding: 20px;
-}
-
-.card-content-4 p{
-    font-size: 20px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-.card-content-4 img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 76px;
-}
-
-.name-4{
-    margin-top: 95px;
-    position: absolute;
-    padding-left: 55px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-/*-------------------testcard - 5 ------------------*/
-
-.testcard-5{
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    border-radius: 10px;
-    width: 250px;
-    left: 51.5%;
-    top: 320%;
-    height: 250px;
-}
-
-
-.card-content-5{
-    padding: 20px;
-}
-
-.card-content-5 p{
-    font-size: 20px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
-
-.card-content-5 img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-top: 76px;
-}
-
-.name-5{
-    margin-top: 93px;
-    position: absolute;
-    padding-left: 25px;
-    padding-right: 5px;
-    padding-bottom: 10px;
-    text-align: center;
-    font-size: 14px;
-    color: rgb(7, 7, 7);
-    font-family: "Raleway";
-    font-weight: 500;
-}
 
 
 /*-------------------Black Card ------------------*/
@@ -424,26 +420,30 @@ body{
     margin: auto;
     border-radius: 15px;
     width: 50%;
+    height:65%;
 
 }
 
 .black-card-content{
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
     color: rgb(255, 255, 255);
     font-family: "Raleway";
     font-weight: 500;
     font-size: 32px;
     letter-spacing: -1px;
-    padding: 20px;
+    padding: 14px;
     text-align: center;
 }
 
 .black-card img{
-    margin-left: 20px;
-    margin-bottom: 20px;
-    height: 360px;
-    width: 233px;
+     margin-left: 12px;
+     margin-top: -2%;
+    margin-bottom: 2px;
+    height: 300px;
+    width: 200px; 
 }
 
 .black-card-name{
@@ -458,7 +458,7 @@ body{
 }
 
 .black-card-para{
-    margin-top: 5%;
+    margin-top: 4%;
     margin-left: 15%;
     margin-right: 15%;
     width: 30%;
@@ -472,7 +472,7 @@ body{
 }
 
 .black-card-skill{
-    margin-top: 10%;
+    margin-top: 12%;
     margin-left: 15%;
     font-size: 24px;
     position: absolute;
@@ -483,8 +483,8 @@ body{
 }
 
 .black-card-skillbar{
-    margin-top: 12%;
-    margin-left: 27%;
+    margin-top: 10%;
+    margin-left: 20%;
     font-size: 16px;
     position: absolute;
     color: rgb(255, 255, 255);
@@ -494,7 +494,7 @@ body{
 }
 
 .black-card-edit{
-    margin-top: 13.5%;
+    margin-top: 13%;
     margin-left: 15%;
     font-size: 14px;
     position: absolute;
@@ -505,7 +505,7 @@ body{
 }
 
 .black-card-edit-1{
-    margin-top: 15%;
+    margin-top: 14%;
     margin-left: 15%;
     font-size: 14px;
     position: absolute;
@@ -516,7 +516,7 @@ body{
 }
 
 .black-card-edit-2{
-    margin-top: 16.5%;
+    margin-top: 15%;
     margin-left: 15%;
     font-size: 14px;
     position: absolute;
@@ -527,7 +527,7 @@ body{
 }
 
 .black-card-edit-3{
-    margin-top: 18%;
+    margin-top: 16%;
     margin-left: 15%;
     font-size: 14px;
     position: absolute;
@@ -539,7 +539,7 @@ body{
 /*-------------------Black Card - Skill Bar ------------------*/
 .black-skill-grey{
     background-color: rgb(92, 91, 91);
-    margin-top: 13.6%;
+    margin-top: 13%;
     position: absolute;
     margin-left: 27%;
     width: 315px;
@@ -549,7 +549,7 @@ body{
 
 .black-skill-white{
     background-color: rgb(255, 255, 255);
-    margin-top: 13.6%;
+    margin-top: 13%;
     position: absolute;
     margin-left: 27%;
     width: 290px;
@@ -559,7 +559,7 @@ body{
 
 .black-skill-grey-1{
     background-color: rgb(92, 91, 91);
-    margin-top: 15.1%;
+    margin-top: 14%;
     position: absolute;
     margin-left: 27%;
     width: 315px;
@@ -569,7 +569,7 @@ body{
 
 .black-skill-white-1{
     background-color: rgb(255, 255, 255);
-    margin-top: 15.1%;
+    margin-top: 14%;
     position: absolute;
     margin-left: 27%;
     width: 250px;
@@ -579,7 +579,7 @@ body{
 
 .black-skill-grey-2{
     background-color: rgb(92, 91, 91);
-    margin-top: 16.7%;
+    margin-top: 15%;
     position: absolute;
     margin-left: 27%;
     width: 315px;
@@ -589,7 +589,7 @@ body{
 
 .black-skill-white-2{
     background-color: rgb(255, 255, 255);
-    margin-top: 16.7%;
+    margin-top: 15%;
     position: absolute;
     margin-left: 27%;
     width: 120px;
@@ -599,7 +599,7 @@ body{
 
 .black-skill-grey-3{
     background-color: rgb(92, 91, 91);
-    margin-top: 18.2%;
+    margin-top: 16%;
     position: absolute;
     margin-left: 27%;
     width: 315px;
@@ -609,7 +609,7 @@ body{
 
 .black-skill-white-3{
     background-color: rgb(255, 255, 255);
-    margin-top: 18.2%;
+    margin-top: 16%;
     position: absolute;
     margin-left: 27%;
     width: 200px;
@@ -628,39 +628,51 @@ body{
 
 .connect-container{
     position: absolute;
-    top: 430%;
+    top: 470%;
     left: 49%;
-    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: rgb(253, 253, 253);
     font-family: "Raleway";
     font-weight: 300;
     font-size: 32px;
     letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    align-items: grid; 
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
 
 }
 
 .OR{
     position: absolute;
-    top: 455%;
+    top: 516%;
     left: 49%;
-    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: rgb(253, 253, 253);
     font-family: "Raleway";
     font-weight: 300;
     font-size: 32px;
     letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    align-items: grid; 
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
 
 }
 
 .insta img{
     position: absolute;
-    top: 449%;
+    top: 520%;
     left: 53%;
     width: 38px;
     height: 38px;
@@ -669,8 +681,8 @@ body{
 
 .mail img{
     position: absolute;
-    top: 456%;
-    left: 53%;
+    top: 520%;
+    left: 30%;
     width: 38px;
     height: 38px;
 
@@ -679,33 +691,45 @@ body{
 
 .insta-text{
     position: absolute;
-    top: 451%;
-    left: 60%;
-    transform: translate(-50%, -60%);
+    top: 522%;
+    left: 62%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: rgb(253, 253, 253);
     font-family: "Raleway";
     font-weight: 300;
     font-size: 24px;
     letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    align-items: grid; 
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
 
 }
 
 .mail-text{
     position: absolute;
-    top: 458%;
-    left: 62.8%;
-    transform: translate(-50%, -60%);
+    top: 522%;
+    left: 42%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
     text-align: center;
     color: rgb(253, 253, 253);
     font-family: "Raleway";
     font-weight: 300;
     font-size: 24px;
     letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
     display: flex;
-    align-items: grid; 
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
 
 }
 
@@ -713,14 +737,14 @@ body{
 
 .form{
     position: absolute;
-    top: 440%;
-    left: 25%;  
+    top: 475%;
+    left:30%;  
     padding-top: 50px;
     text-align: center;
     color: rgb(253, 253, 253);
     font-family: "Raleway";
     font-weight: 300;
-    width: 18%;
+    width: 40%;
     height: 30%;
     font-size: 32px;
     letter-spacing: -.5x;   
@@ -746,7 +770,7 @@ body{
 .form input{
     width: 80%;
     height: 12%;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 2%;
     border-radius: 5px;
     border: black 1px solid;
@@ -758,7 +782,7 @@ body{
 .form textarea{
     width: 80%;
     height: 30%;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 2%;
     border-radius: 5px;
     border: black 1px solid;
@@ -770,7 +794,7 @@ body{
 .form button{
     width: 50%;
     height: 10%;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 5%;
     border-radius: 5px;
     border: black 1px solid;
@@ -1212,6 +1236,1295 @@ body{
         margin-left: 25%;
         letter-spacing: 0.5;
     }
+    /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif ;
+    font-size: border- box ;
+}
+
+.container{
+    background-image: url("images/Rectangle 2 (1).jpg");
+    background-size: cover;
+    background-position: center;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.container img{
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+.hi-container{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    -webkit-transform: translate(-200%, -70%);
+        -ms-transform: translate(-200%, -70%);
+            transform: translate(-200%, -70%);
+    text-align: center;
+    color: white;
+    font-family: "Rampart One";
+    font-weight: 200;
+    font-size: 160px;
+
+}
+.text-container{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 96px;
+    letter-spacing: -1px;
+}
+
+.I-am-container{
+    position: absolute;
+    top: 45%;
+    left: 52.5%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+.editor-container{
+    position: absolute;
+    top: 56%;
+    left: 55%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: white;
+    font-family: "Raleway";
+    font-weight: 100;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+
+.lets-connect{
+    position: absolute;
+    top: 61%;
+    left: 65.5%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    background-color: white noboarders;
+    padding: 10px 20px;
+    color: black;
+    font-family: "Raleway";
+    font-weight: 550;
+    font-size: 16px;
+    letter-spacing: -1px;
+}
+
+
+/*-------------------My Work------------------*/
+
+
+.my-work{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -1px;
+}
+
+
+.video-1 {
+    position: absolute;
+    margin-left: 28%;
+    margin-top: 5%;
+    width: 338.97px;
+    height: 616.31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 32px;
+
+  }
+  
+
+.video-2{
+    position: absolute;
+    margin-left: 53%;
+    margin-top: 5%;
+    width: 338.97px;
+    height: 616.31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 32px;
+}
+
+.video-3{
+    position: absolute;
+    margin-left: 28%;
+    margin-top: 43%;
+    width: 338.97px;
+    height: 616.31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 32px;
+}
+
+.video-4{
+    position: absolute;
+    margin-left: 53%;
+    margin-top: 43%;
+    width: 338.97px;
+    height: 616.31px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 32px;
+}
+
+.view-more{
+    position: absolute;
+    top: 258%;
+    left: 49.7%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    font-family: "Raleway";
+    font-weight: 550;
+    font-size: 16px;
+    letter-spacing: -1px;
+    border-radius: 5px;
+}
+
+/*-------------------Testimonial------------------*/
+
+.bg-4 img{
+    background-image: url("images/Rectangle 2 (2).jpg");
+    margin-top: 83%;
+    width: 100%;
+    height: 100%;
+}
+
+.testmonial-container{
+    position: absolute;
+    top: 280%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
+
+}
+
+.card-container{
+    display: -ms-grid;
+    display: grid;
+    border-radius: 10%;
+}
+
+
+.testcard-1{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    top: 290%;
+    left: 26%;
+    height: 250px;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card-content p{
+
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content img{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.name{
+    margin-top: 65px;
+    position: absolute;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+
+/*-------------------testcard - 2 ------------------*/
+
+
+.testcard-2{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 43%;
+    top: 290%;
+    height: 250px;
+}
+
+
+.card-content-2{
+    padding: 20px;
+}
+
+.card-content-2 p{
+
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-2 img{
+    
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 27px;
+}
+
+.name-2{
+    margin-top: 45px;
+    position: absolute;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+/*-------------------testcard - 3 ------------------*/
+
+.testcard-3{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 60%;
+    top: 290%;
+    height: 250px;
+}
+
+
+.card-content-3{
+    padding: 20px;
+}
+
+.card-content-3 p{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-3 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+.name-3{
+    margin-top: 66px;
+    position: absolute;
+    padding-left: 55px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+/*-------------------testcard - 4 ------------------*/
+
+.testcard-4{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 35%;
+    top: 320%;
+    height: 250px;
+}
+
+
+.card-content-4{
+    padding: 20px;
+}
+
+.card-content-4 p{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-4 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 76px;
+}
+
+.name-4{
+    margin-top: 95px;
+    position: absolute;
+    padding-left: 55px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+/*-------------------testcard - 5 ------------------*/
+
+.testcard-5{
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-radius: 10px;
+    width: 250px;
+    left: 51.5%;
+    top: 320%;
+    height: 250px;
+}
+
+
+.card-content-5{
+    padding: 20px;
+}
+
+.card-content-5 p{
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+.card-content-5 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 76px;
+}
+
+.name-5{
+    margin-top: 93px;
+    position: absolute;
+    padding-left: 25px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(7, 7, 7);
+    font-family: "Raleway";
+    font-weight: 500;
+}
+
+
+/*-------------------Black Card ------------------*/
+
+.black-card{
+    background-color: rgb(0, 0, 0);
+    margin: auto;
+    border-radius: 15px;
+    width: 50%;
+
+}
+
+.black-card-content{
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: auto;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -1px;
+    padding: 20px;
+    text-align: center;
+}
+
+.black-card img{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    height: 360px;
+    width: 233px;
+}
+
+.black-card-name{
+    margin-top: 2%;
+    margin-left: 15%;
+    font-size: 28px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 500;
+    text-align: center;
+}
+
+.black-card-para{
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 30%;
+    font-size: 16px;
+    letter-spacing: 1;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: start;
+}
+
+.black-card-skill{
+    margin-top: 10%;
+    margin-left: 15%;
+    font-size: 24px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 500;
+    text-align: center;
+}
+
+.black-card-skillbar{
+    margin-top: 16%;
+    margin-left: 27%;
+    font-size: 16px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit{
+    margin-top: 13.5%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit-1{
+    margin-top: 15%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit-2{
+    margin-top: 16.5%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+
+.black-card-edit-3{
+    margin-top: 18%;
+    margin-left: 15%;
+    font-size: 14px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    text-align: center;
+}
+/*-------------------Black Card - Skill Bar ------------------*/
+.black-skill-grey{
+    background-color: rgb(92, 91, 91);
+    margin-top: 13.6%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white{
+    background-color: rgb(255, 255, 255);
+    margin-top: 13.6%;
+    position: absolute;
+    margin-left: 27%;
+    width: 290px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-grey-1{
+    background-color: rgb(92, 91, 91);
+    margin-top: 15.1%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white-1{
+    background-color: rgb(255, 255, 255);
+    margin-top: 15.1%;
+    position: absolute;
+    margin-left: 27%;
+    width: 250px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-grey-2{
+    background-color: rgb(92, 91, 91);
+    margin-top: 16.7%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white-2{
+    background-color: rgb(255, 255, 255);
+    margin-top: 16.7%;
+    position: absolute;
+    margin-left: 27%;
+    width: 120px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-grey-3{
+    background-color: rgb(92, 91, 91);
+    margin-top: 18.2%;
+    position: absolute;
+    margin-left: 27%;
+    width: 315px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.black-skill-white-3{
+    background-color: rgb(255, 255, 255);
+    margin-top: 18.2%;
+    position: absolute;
+    margin-left: 27%;
+    width: 200px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+/*-------------------Footer------------------*/
+.six{
+    height: 10%;
+}
+.bg-6 img{
+    width: 100%;
+    height: 780%;
+}
+
+.connect-container{
+    position: absolute;
+    top: 430%;
+    left: 49%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
+
+}
+
+.OR{
+    position: absolute;
+    top: 455%;
+    left: 49%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
+
+}
+
+.insta img{
+    position: absolute;
+    top: 449%;
+    left: 53%;
+    width: 38px;
+    height: 38px;
+
+}
+
+.mail img{
+    position: absolute;
+    top: 456%;
+    left: 53%;
+    width: 38px;
+    height: 38px;
+
+}
+
+
+.insta-text{
+    position: absolute;
+    top: 451%;
+    left: 60%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
+
+}
+
+.mail-text{
+    position: absolute;
+    top: 458%;
+    left: 62.8%;
+    -webkit-transform: translate(-50%, -60%);
+        -ms-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 24px;
+    letter-spacing: -.5x;   
+    display: -webkit-box;   
+    display: -ms-flexbox;   
+    display: flex;
+    -webkit-box-align: grid;
+        -ms-flex-align: grid;
+            align-items: grid; 
+
+}
+
+
+
+.form{
+    position: absolute;
+    top: 440%;
+    left: 25%;  
+    padding-top: 50px;
+    text-align: center;
+    color: rgb(253, 253, 253);
+    font-family: "Raleway";
+    font-weight: 300;
+    width: 18%;
+    height: 30%;
+    font-size: 32px;
+    letter-spacing: -.5x;   
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+
+}
+.form-contact{
+    position: absolute;
+    top: 5%;
+    left: 10%;  
+
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway";
+    font-weight: 500;
+
+    font-size: 32px;
+    letter-spacing: -.5x;   
+
+
+}
+.form input{
+    width: 80%;
+    height: 12%;
+    margin-top: 5%;
+    margin-left: 2%;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+
+.form textarea{
+    width: 80%;
+    height: 30%;
+    margin-top: 5%;
+    margin-left: 2%;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    font-family: "Raleway";
+    font-size: 18px;
+}
+
+.form button{
+    width: 50%;
+    height: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: black 1px solid;
+    padding: 10px;
+    padding-bottom: 25px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: -.5x;   
+}
+
+
+
+@media screen and (max-width: 1440px) {
+    .hi-container{
+        top: 35%;   
+    }
+    .text-container{
+        top: 35%;
+    }
+    
+    .I-am-container{
+        top: 30%;
+        left: 50.5%;
+    }
+    
+    .editor-container{
+
+        top: 40.5%;
+        left: 55%;
+    }
+    
+    .lets-connect{
+        top: 45%;
+        left: 67%;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 51%;
+        top: 86%;
+    }
+    
+    
+    .video-1 {
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+      
+    
+    .video-2{
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+    
+    .video-3{
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+    
+    .video-4{
+        width: 300px;
+        height: 500px;
+        border-radius: 35px;
+    }
+    
+    .view-more{
+        top: 225%;
+        left: 51%;
+    }
+    
+    /*-------------------Testimonial------------------*/
+    
+    .testmonial-container{
+        top: 244%;
+        left: 51%;
+    }
+    
+    .testcard-1{
+        top: 250%;
+        left: 20%;
+    }
+    
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        left: 42%;
+        top: 250%;
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 64%;
+        top: 250%;
+    }
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 30%;
+        top: 285%;
+    }
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 52%;
+        top: 285%;
+    }   
+    
+    /*-------------------Black Card ------------------*/
+    
+    .black-card-name{
+        margin-top: 3%;
+        margin-left: 20%;
+    }
+    
+    .black-card-para{
+        margin-top: 6%;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 28%;
+    }
+    
+    .black-card-skill{
+        margin-top: 13%;
+        margin-left: 20%;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 15%;
+        margin-left: 28%;
+    }
+    
+    .black-card-edit{
+        margin-top: 16.5%;
+        margin-left: 20%;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 18%;
+        margin-left: 20%;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 19.4%;
+        margin-left: 20%;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 20.9%;
+        margin-left: 20%;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 16.7%;
+        margin-left: 28%;
+        width: 285px;
+    }
+    
+    .black-skill-white{
+        margin-top: 16.7%;
+        margin-left: 28%;
+        width: 260px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 18.1%;
+        margin-left: 28%;
+        width: 285px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 18.1%;
+        margin-left: 28%;
+        width: 230px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 19.7%;
+        margin-left: 28%;
+        width: 285px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 19.7%;
+        margin-left: 28%;
+        width: 120px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 21.1%;
+        margin-left: 28%;
+        width: 285px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 21.1%;
+        margin-left: 28%;
+        width: 150px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 394%;
+    }
+    
+    .OR{
+        top: 415%;
+        left: 48%;
+    }
+    
+    .insta img{
+        top: 410%;
+        width: 38px;
+        height: 38px;
+    
+    }
+    
+    .mail img{
+        top: 416.5%;
+        width: 38px;
+        height: 38px;
+    }
+    
+    
+    .insta-text{
+        top: 412%;
+        left: 62.5%;    
+    }
+    
+    .mail-text{
+        top: 419%;
+        left: 66.2%;
+    }
+    
+    .form{
+        top: 400%;
+    
+    }
+
+}
+
+
+/**---------------1024---------------------------*/
+
+
+@media screen and (max-width: 1024px) {
+    .hi-container{
+        top: 25%;   
+        left: 70%;
+    }
+    .text-container{
+        top: 25%;
+        left: 70%;
+    }
+    
+    .I-am-container{
+        top: 21%;
+        left: 56.2%;
+    }
+    
+    .editor-container{
+
+        top: 30.5%;
+        left: 50%;
+        -webkit-transform: translate(-15%, -60%);
+            -ms-transform: translate(-15%, -60%);
+                transform: translate(-15%, -60%);
+    }
+    
+    .lets-connect{
+        top: 35%;
+        left: 80%;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 51%;
+        top: 47%;
+    }
+    
+    
+    .video-1 {
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+      
+    
+    .video-2{
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+    
+    .video-3{
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+    
+    .video-4{
+        width: 200px;
+        height: 400px;
+        border-radius: 40px;
+    }
+    
+    .view-more{
+        top: 124%;
+        left: 51%;
+    }
+    
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+        width: 100%;
+        height: 80%;
+    }
+    .testmonial-container{
+        top: 134%;
+        left: 50%;
+    }
+    
+    .testcard-1{
+        top: 140%;
+        left: 7%;
+    }   
+    
+    .card-content img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        left: 38%;
+        top: 140%;
+    }
+    .card-content-2 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 25px;
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 69%;
+        top: 140%;
+    }
+    .card-content-3 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 21%;
+        top: 168%;
+    }
+    .card-content-4 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 75px;
+    }
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 52%;
+        top: 168%;
+    }   
+    .card-content-5 img{
+        
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-top: 75px;
+    }
+    
+    /*-------------------Black Card ------------------*/
+    .black-card{
+        width: 70%;   
+    }
+  
+    .black-card img{
+        height: 300px;
+        width: 200px;
+    }
+    .black-card-name{
+        margin-top: 3%;
+        margin-left: 25%;
+    }
+    
+    .black-card-para{
+        margin-top: 6.5%;
+        margin-left: 25%;
+        margin-right: 20%;
+        width: 40%;
+    }
+    
+    .black-card-skill{
+        margin-top: 17%;
+        margin-left: 25%;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 19%;
+        margin-left: 36%;
+    }
+    
+    .black-card-edit{
+        margin-top: 21.5%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+    }
     
     .black-card-edit-1{
         margin-top: 24%;
@@ -1353,7 +2666,9 @@ body{
 
         top: 30%;
         left: 50.5%;
-        transform: translate(-15%, -60%);
+        -webkit-transform: translate(-15%, -60%);
+            -ms-transform: translate(-15%, -60%);
+                transform: translate(-15%, -60%);
         font-size: 18px;
         letter-spacing: 0;
     }
@@ -1784,6 +3099,4148 @@ body{
     }
 
 }
+
+@media screen and (max-width: 425px) {
+    .container {
+        background-image: url('images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 44%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 50%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 56%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 70%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 148%;
+        left: 51%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 150%;
+    }
+    .testmonial-container{
+        top: 160%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 165%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 186%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 155%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 197%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 176%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 78%;
+        margin-left: 22%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 85%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 78%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 105%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 110%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 114%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 118%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 122%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 111%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 111%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 115%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 115%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 119%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 119%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 123%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 123%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 318%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 360%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 362%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 368%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 364%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 370%;
+        left: 57.5%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 320%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 700px) {
+    .hi-container{
+        top: 25%;   
+        left: 70%;
+        font-size: 120px;
+    }
+    .text-container{
+        top: 25%;
+        left: 72%;
+        font-size: 80px;
+    }
+    
+    .I-am-container{
+        top: 21%;
+        left: 56.7%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 30%;
+        left: 50.5%;
+        -webkit-transform: translate(-15%, -60%);
+            -ms-transform: translate(-15%, -60%);
+                transform: translate(-15%, -60%);
+        font-size: 18px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 35%;
+        left: 83%;
+        font-size: 12px;
+        padding: 8px 10px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 51%;
+        top: 41%;
+        font-size: 24px;
+    }
+    
+    
+    .video-1 {
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+        margin-top: 1%;
+    }
+      
+    
+    .video-2{
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+
+        margin-top: 1%;
+    }
+    
+    .video-3{
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+        margin-top: 40%;
+    }
+    
+    .video-4{
+        width: 150px;
+        height: 350px;
+        border-radius: 60px;
+        margin-top: 40%;
+    }
+    
+    .view-more{
+        top: 117%;
+        left: 51%;
+        font-size: 10px;
+    }
+    
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+        width: 100%;
+        height: 80%;
+    }
+    .testmonial-container{
+        top: 121%;
+        left: 50%;
+        font-size: 24px;
+    }
+    
+    .testcard-1{
+        top: 124%;
+        left: 7%;
+        width: 200px;
+        height: 200px;
+    }   
+
+    .card-content{
+        padding: 10px;
+    }
+    
+    .card-content p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    .name{
+        margin-top: 60px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        left: 38%;
+        top: 124%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-2{
+        padding: 10px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-2{
+        margin-top: 43px;
+        padding-left: 35px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 69%;
+        top: 124%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-3{
+        padding: 10px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    .name-3{
+        margin-top: 60px;
+        padding-left: 40px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 21%;
+        top: 150%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-4{
+        padding: 10px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 90px;
+    }
+    
+    .name-4{
+        margin-top: 100px;
+        padding-left: 40px;
+        font-size: 12px;
+    }
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 52%;
+        top: 150%;
+        width: 200px;
+        height: 200px;
+    }
+    .card-content-5{
+        padding: 10px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-top: 50px;
+    }
+    
+    .name-5{
+        margin-top: 60px;
+        padding-left: 20px;
+        font-size: 12px;
+    }
+    
+    /*-------------------Black Card ------------------*/
+    .black-card{
+        width: 70%;   
+    }
+
+    .black-card-content{       
+        font-size: 24px;
+    }
+  
+    .black-card img{
+        height: 250px;
+        width: 160px;
+    }
+    .black-card-name{
+        margin-top: 3%;
+        margin-left: 25%;
+        font-size: 18px;
+    }
+    
+    .black-card-para{
+        margin-top: 6.5%;
+        margin-left: 25%;
+        margin-right: 20%;
+        width: 40%;
+        font-size: 12px;
+    }
+    
+    .black-card-skill{
+        margin-top: 19%;
+        margin-left: 25%;
+        font-size: 18px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 21%;
+        margin-left: 38%;
+        font-size: 12px;
+    }
+    
+    .black-card-edit{
+        margin-top: 23.5%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+        font-size: 12px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 26%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+        font-size: 12px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 28.8%;
+        margin-left: 25%;
+        font-size: 12px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 31.3%;
+        margin-left: 25%;
+        font-size: 12px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 24%;
+        margin-left: 38%;
+        width: 190px;
+        height: 6px;
+    }
+    
+    .black-skill-white{
+        margin-top: 24%;
+        margin-left:38%;
+        width: 180px;
+        height: 6px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 26.5%;
+        margin-left:38%;
+        width: 190px;
+        height: 6px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 26.5%;
+        margin-left:38%;
+        width: 150px;
+        height: 6px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 29.5%;
+        margin-left: 38%;
+        width: 190px;
+        height: 6px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 29.5%;
+        margin-left: 38%;
+        width: 100px;
+        height: 6px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 32.2%;
+        margin-left: 38%;
+        width: 190px;
+        height: 6px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 32.2%;
+        margin-left: 38%;
+        width: 130px;
+        height: 6px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 550%;
+    }
+    
+    .connect-container{
+        top: 240%;
+        font-size: 24px;
+    }
+    
+    .OR{
+        top: 260%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 255%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 262%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 257%;
+        left: 67.5%;    
+        font-size: 18px;
+    }
+    
+    .mail-text{
+        top: 264%;
+        left: 73.5%;
+        font-size: 18px;
+    }
+    
+    .form{
+        top: 245%;
+        left: 10%;
+        width: 30%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 64%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 48%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 48%;
+        left: 28%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 53%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 67%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 60%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 60%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 135%;
+        left: 43%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 115%;
+    }
+    .testmonial-container{
+        top: 147%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 150%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 170%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 141%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 179%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 160%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 55%;
+        margin-left: 16%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 60%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 58%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 75%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 80%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 84%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 88%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 92%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 80.5%;
+        margin-left: 22%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 80.5%;
+        margin-left:22%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 84.5%;
+        margin-left:22%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 84.5%;
+        margin-left:22%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 88.5%;
+        margin-left: 22%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 88.5%;
+        margin-left: 22%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 93%;
+        margin-left: 22%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 93%;
+        margin-left: 22%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 293%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 337%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 338%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 343%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 340%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 345%;
+        left: 55%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 298%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 435px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 46%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 48%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 53%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 65%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 138%;
+        left: 45%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 140%;
+    }
+    .testmonial-container{
+        top: 150%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 155%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 176%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 145%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 187%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 166%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 65%;
+        margin-left: 18%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 70%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 65%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 90%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 95%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 99%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 103%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 107%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 96%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 96%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 100%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 100%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 104%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 104%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 108%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 108%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 650%;
+    }
+    
+    .connect-container{
+        top: 296%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 337%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 338%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 343%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 340%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 345%;
+        left: 56%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 298%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 425px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 46%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 48%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 53%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 65%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 134%;
+        left: 45%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 150%;
+    }
+    .testmonial-container{
+        top: 150%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 155%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 176%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 145%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 187%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 166%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 65%;
+        margin-left: 18%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 70%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 65%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 90%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 95%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 99%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 103%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 107%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 96%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 96%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 100%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 100%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 104%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 104%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 108%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 108%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 295%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 337%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 338%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 343%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 340%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 345%;
+        left: 56%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 298%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 410px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 46%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 50%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 56%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 65%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 132%;
+        left: 45%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 150%;
+    }
+    .testmonial-container{
+        top: 150%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 155%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 176%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 145%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 187%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 166%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 68%;
+        margin-left: 18%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 75%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 70%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 95%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 100%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 104%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 108%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 112%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 101%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 101%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 105%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 105%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 109%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 109%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 113%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 113%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 293%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 337%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 338%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 343%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 340%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 345%;
+        left: 56%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 298%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+@media screen and (max-width: 385px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 46%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 50%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 56%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 65%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 132%;
+        left: 45%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 150%;
+    }
+    .testmonial-container{
+        top: 150%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 155%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 176%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 145%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 187%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 166%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 69.5%;
+        margin-left: 18%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 75%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 70%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 95%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 100%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 104%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 108%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 112%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 101%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 101%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 105%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 105%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 109%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 109%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 113%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 113%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 293%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 337%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 338%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 343%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 340%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 345%;
+        left: 56%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 298%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        background-image: url('../Final_portfolio/images/mob/mod_1.png'); 
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: absolute;
+        width: 100%;
+        height: 65vh;
+    }
+    .container img{
+        width: 0%;
+        height: 0%;
+    
+    }
+    .hi-container{
+        top: 43.5%;   
+        left: 66%;
+        font-size: 96px;
+    }
+    .text-container{
+        top: 44%;
+        left: 60.5%;
+        font-size: 48px;
+    }
+    
+    .I-am-container{
+        top: 40.5%;
+        left: 46%;
+        font-size: 24px;
+    }
+    
+    .editor-container{
+
+        top: 50%;
+        left: 23%;
+        position: center;
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+    
+    .lets-connect{
+        top: 56%;
+        left: 50%;
+        font-size: 16px;
+        padding: 7px 20px;
+        border-radius: 20px;
+        letter-spacing: 0px;
+    }
+    
+    /*-------------------My Work------------------*/
+    .my-work{
+        left: 20%;
+        top: 65%;
+        font-size: 20px;
+    }
+    
+    
+    .video-1 {
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 10%;
+    }
+      
+    
+    .video-2{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 8%;
+        margin-left: 50%;
+    }
+    
+    .video-3{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 10%;
+    }
+    
+    .video-4{
+        width: 133px;
+        height: 242px;
+        border-radius: 20px;
+        margin-top: 75%;
+        margin-left: 50%;
+    }
+    
+    .view-more{
+        top: 142%;
+        left: 45%;
+        font-size: 16px;
+        padding: 7px 28px;
+        border-radius: 20px;
+    }
+
+    /*-------------------Testimonial------------------*/
+    .bg-4 img{
+
+        width: 100%;
+        height: 82%;
+        margin-top: 150%;
+    }
+    .testmonial-container{
+        top: 154%;
+        left: 24%;
+        font-size: 20px;
+    }
+    
+    .testcard-1{
+        top: 157%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }   
+
+    .card-content{
+        padding: 6px;
+    }
+    
+    .card-content p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name{
+        margin-top: 38px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 2 ------------------*/
+    
+    .testcard-2{
+        top: 178%;
+        left: 8%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-2{
+        padding: 6px;
+    }
+    
+    .card-content-2 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-2 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 15px;
+    }
+    
+    .name-2{
+        margin-top: 25px;
+        padding-left: 30px;
+        font-size: 9px;
+        width: 90px;
+        
+    }
+    
+    /*-------------------testcard - 3 ------------------*/
+    
+    .testcard-3{
+        left: 50%;
+        top: 148%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-3{
+        padding: 6px;
+    }
+    
+    .card-content-3 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-3 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+    
+    .name-3{
+        margin-top: 40px;
+        padding-left: 31px;
+        padding-right: 5px;
+        padding-bottom: 10px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 4 ------------------*/
+    
+    .testcard-4{
+        left: 50%;
+        top: 190%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-4{
+        padding: 6px;
+    }
+    
+    .card-content-4 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-4 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-4{
+        margin-top: 50px;
+        padding-left: 33px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------testcard - 5 ------------------*/
+    
+    .testcard-5{
+        left: 50%;
+        top: 169%;
+        width: 142px;
+        height: 140px;
+    }
+    .card-content-5{
+        padding: 6px;
+    }
+    
+    .card-content-5 p{    
+        font-size: 12px;
+        font-weight: 500;
+    }
+    
+    .card-content-5 img{
+        
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-top: 40px;
+    }
+    
+    .name-5{
+        margin-top: 50px;
+        padding-left: 20px;
+        font-size: 9px;
+    } 
+    
+    /*-------------------Black Card ------------------*/
+   .black-card{
+        width: 330px;   
+        height: 534px;
+        position: center;
+    }
+
+    .black-card-content{       
+        font-size: 20px;
+    }
+
+    .black-card img{
+        
+        top: .1%;
+        height: 250px;
+        width: 160px;
+        margin-left: 25%;
+        border-radius: 12px;
+        
+    }
+    .black-card-name{
+        margin-top: 75%;
+        margin-left: 20%;
+        font-size: 16px;
+    }
+    
+    .black-card-para{
+        margin-top: 80%;
+        margin-left: 2%;
+        margin-right: 20%;
+        width: 77%;
+        font-size: 11px;
+    }
+    
+    .black-card-skill{
+        margin-top: 100%;
+        margin-left: 2%;
+        font-size: 12px;
+    }
+    
+    .black-card-skillbar{
+        margin-top: 106%;
+        margin-left: 38%;
+        font-size: 11px;
+        display: none;
+    }
+    
+    .black-card-edit{
+        margin-top: 104%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-1{
+        margin-top: 108%;
+        margin-left: 2%;
+        letter-spacing: 0.5;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 112%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 116%;
+        margin-left: 2%;
+        font-size: 11px;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 105%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white{
+        margin-top: 105%;
+        margin-left:28%;
+        width: 160px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 109%;
+        margin-left:28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 109%;
+        margin-left:28%;
+        width: 145px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 113%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 113%;
+        margin-left: 28%;
+        width: 100px;
+        height: 5px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 117%;
+        margin-left: 28%;
+        width: 175px;
+        height: 5px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 117%;
+        margin-left: 28%;
+        width: 120px;
+        height: 5px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 700%;
+    }
+    
+    .connect-container{
+        top: 312%;
+        left: 25%;
+        font-size: 20px;
+    }
+    
+    .OR{
+        top: 355%;
+        left: 48%;
+        font-size: 20px;
+    }
+    
+    .insta img{
+        top: 356%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    
+    }
+    
+    .mail img{
+        top: 362%;
+        left: 20%;
+        width: 32px;
+        height: 32px;
+    }
+    
+    
+    .insta-text{
+        top: 358%;
+        left: 48%;    
+        font-size: 16px;
+    }
+    
+    .mail-text{
+        top: 364%;
+        left: 57%;
+        font-size: 16px;
+    }
+    
+    .form{
+        top: 315%;
+        left: 20%;
+        width: 60%;
+        font-size: 18px;
+    }
+    
+    .form-contact{
+        top: 5%;
+        left: 10%;  
+        font-size: 22px;   
+    }
+    .form input{
+        width: 80%;
+        height: 12%;
+        margin-top: 4%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form textarea{
+        width: 80%;
+        height: 30%;
+        margin-top: 5%;
+        margin-left: 2%;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    .form button{
+        width: 45%;
+        height: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        padding: 10px;
+        padding-bottom: 20px;
+        font-size: 14px;
+    }
+
+}
+    .black-card-edit-1{
+        margin-top: 24%;
+        margin-left: 25%;
+        letter-spacing: 0.5;
+    }
+    
+    .black-card-edit-2{
+        margin-top: 26.4%;
+        margin-left: 25%;
+    }
+    
+    .black-card-edit-3{
+        margin-top: 28.9%;
+        margin-left: 25%;
+    }
+    /*-------------------Black Card - Skill Bar ------------------*/
+    .black-skill-grey{
+        margin-top: 22%;
+        margin-left: 36%;
+        width: 285px;
+    }
+    
+    .black-skill-white{
+        margin-top: 22%;
+        margin-left:36%;
+        width: 260px;
+    }
+    
+    .black-skill-grey-1{
+        margin-top: 24.3%;
+        margin-left:36%;
+        width: 285px;
+    }
+    
+    .black-skill-white-1{
+        margin-top: 24.3%;
+        margin-left:36%;
+        width: 230px;
+    }
+    
+    .black-skill-grey-2{
+        margin-top: 26.7%;
+        margin-left: 36%;
+        width: 285px;
+
+    }
+    
+    .black-skill-white-2{
+        margin-top: 26.7%;
+        margin-left: 36%;
+        width: 120px;
+    }
+    
+    .black-skill-grey-3{
+        margin-top: 29.3%;
+        margin-left: 36%;
+        width: 285px;
+    }
+    
+    .black-skill-white-3{
+ 
+        margin-top: 29.3%;
+        margin-left: 36%;
+        width: 150px;
+    }
+    
+    /*-------------------Footer------------------*/
+
+    .bg-6 img{
+        width: 100%;
+        height: 550%;
+    }
+    
+    .connect-container{
+        top: 250%;
+    }
+    
+    .OR{
+        top: 270%;
+        left: 48%;
+    }
+    
+    .insta img{
+        top: 266%;
+        width: 38px;
+        height: 38px;
+    
+    }
+    
+    .mail img{
+        top: 271%;
+        width: 38px;
+        height: 38px;
+    }
+    
+    
+    .insta-text{
+        top: 268%;
+        left: 66.5%;    
+    }
+    
+    .mail-text{
+        top: 273%;
+        left: 71.5%;
+    }
+    
+    .form{
+        top: 255%;
+        left: 10%;
+        width: 30%;
+    }
+
+}
+
+
+/**---------------768---------------------------*/
+
+
+/* Base styles for mobile devices */
+@media (max-width: 768px) {
+    .hi-container {
+        font-size: 100px; /* Adjust size for smaller screens */
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-container {
+        font-size: 48px; /* Adjust size for smaller screens */
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .I-am-container {
+        font-size: 36px; /* Adjust size for smaller screens */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .editor-container {
+        font-size: 18px; /* Adjust size for smaller screens */
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .lets-connect {
+        font-size: 14px; /* Adjust size for smaller screens */
+        padding: 8px 16px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .my-work {
+        font-size: 24px; /* Adjust size for smaller screens */
+    }
+
+    .video-1, .video-2, .video-3, .video-4 {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .view-more {
+        font-size: 14px; /* Adjust size for smaller screens */
+        padding: 8px 16px;
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .testmonial-container, .connect-container, .OR, .form {
+        font-size: 24px; /* Adjust size for smaller screens */
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+    }
+
+    .testcard-1, .testcard-2, .testcard-3, .testcard-4, .testcard-5 {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 5%;
+        margin-top: 5%;
+    }
+
+    .black-card {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .black-card-content {
+        font-size: 24px; /* Adjust size for smaller screens */
+    }
+
+    .black-card img {
+        width: 100px; /* Adjust size for smaller screens */
+        height: auto;
+    }
+
+    .form {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        top: auto;
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .form-contact {
+        font-size: 24px; /* Adjust size for smaller screens */
+    }
+
+    .form input, .form textarea, .form button {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+/* Adjust styles for even smaller screens */
+@media (max-width: 480px) {
+    .hi-container {
+        font-size: 80px; /* Further adjust size for very small screens */
+    }
+
+    .text-container {
+        font-size: 36px; /* Further adjust size for very small screens */
+    }
+
+    .I-am-container {
+        font-size: 28px; /* Further adjust size for very small screens */
+    }
+
+    .editor-container {
+        font-size: 16px; /* Further adjust size for very small screens */
+    }
+
+    .lets-connect {
+        font-size: 12px; /* Further adjust size for very small screens */
+    }
+
+    .my-work {
+        font-size: 20px; /* Further adjust size for very small screens */
+    }
+
+    .view-more {
+        font-size: 12px; /* Further adjust size for very small screens */
+    }
+
+    .testmonial-container, .connect-container, .OR, .form {
+        font-size: 20px; /* Further adjust size for very small screens */
+    }
+}
+
 
 @media screen and (max-width: 425px) {
     .container {
@@ -5519,7 +10976,7 @@ body{
         margin-top: 105%;
         margin-left: 28%;
         width: 175px;
-        height: 5px;
+        height: 6px;
     }
     
     .black-skill-white{
